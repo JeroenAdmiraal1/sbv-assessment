@@ -8,5 +8,5 @@ public interface CustomerService {
 
     void deleteCustomerById(final Long id);
 
-    Customer patchCustomer(final Long id, Customer customer);
+    Customer patchCustomer(final Long id, final Customer customer);
 }

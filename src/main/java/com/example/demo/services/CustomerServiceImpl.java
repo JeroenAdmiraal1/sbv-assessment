@@ -25,6 +25,8 @@ public class CustomerServiceImpl implements CustomerService {
     public Customer patchCustomer(final Long id, final Customer customer) {
         return customerRepository.findById(id).map(cs -> {
 
+            //TODO: expand options
+
             if (customer.getFirstName() != null) {
                 cs.setFirstName(customer.getFirstName());
             }

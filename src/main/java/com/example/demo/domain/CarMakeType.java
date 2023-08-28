@@ -11,7 +11,7 @@ import java.util.Locale;
 public enum CarMakeType {
     LEXUS("Lexus"),
     RENAULT("Renault");
-    // add more
+    //TODO: expand options
 
     private final String description;
 

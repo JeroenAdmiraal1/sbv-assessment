@@ -25,8 +25,41 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public void saveCars(final InputStream inputStream) {
+    public void importCars(final InputStream inputStream) {
         final List<Car> cars = carCSVUtils.cvsToCarList(inputStream);
         carRepository.saveAll(cars);
+    }
+
+    @Override
+    public Car createNewCar(final Car car) {
+        return carRepository.save(car);
+    }
+
+    @Override
+    public void deleteCarById(final Long id) {
+        carRepository.deleteById(id);
+    }
+
+    @Override
+    public Car patchCar(final Long id, final Car car) {
+        return carRepository.findById(id).map(c -> {
+
+            //TODO: expand options
+
+            if (car.getMakeType() != null) {
+                c.setMakeType(car.getMakeType());
+            }
+            if (car.getModel() != null) {
+                c.setModel(car.getModel());
+            }
+            if (car.getVersion() != null) {
+                c.setVersion(car.getVersion());
+            }
+            if (car.getGrossPrice() != null) {
+                c.setGrossPrice(car.getGrossPrice());
+            }
+
+            return carRepository.save(c);
+        }).orElseThrow(ResourceNotFoundException::new);
     }
 }

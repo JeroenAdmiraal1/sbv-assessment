@@ -1,6 +1,5 @@
 package com.example.demo.repositories;
 
-import com.example.demo.domain.Customer;
 import com.example.demo.domain.Interest;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
