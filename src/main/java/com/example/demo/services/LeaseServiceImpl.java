@@ -10,6 +10,9 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
 
+/**
+ * Service for calculating leaserates
+ */
 @Service
 public class LeaseServiceImpl implements LeaseService {
 

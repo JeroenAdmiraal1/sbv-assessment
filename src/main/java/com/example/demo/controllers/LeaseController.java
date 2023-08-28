@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * controller for REST endpoints for lease calculations
+ */
 @RestController
 @RequestMapping(LeaseController.BASE_URL)
 public class LeaseController {
@@ -31,7 +34,7 @@ public class LeaseController {
 
     @GetMapping("/mileage/{mileage}/duration/{duration}/date/{startDate}/car/{carId}")
     @ResponseStatus(HttpStatus.OK)
-    public String getCategoryByName(@PathVariable final Long mileage, @PathVariable final Long duration, @PathVariable final String startDate, @PathVariable final Long carId) {
+    public String getLeaseRateForCar(@PathVariable final Long mileage, @PathVariable final Long duration, @PathVariable final String startDate, @PathVariable final Long carId) {
         final Car car = carRepository.findById(carId).orElse(null);
         if (car == null) {
             throw new ResourceNotFoundException("Car unknown");

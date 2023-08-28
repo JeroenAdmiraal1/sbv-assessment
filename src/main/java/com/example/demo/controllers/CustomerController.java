@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * controller for REST endpoints for customers
+ */
 @RestController
 @RequestMapping(CustomerController.BASE_URL)
 public class CustomerController {

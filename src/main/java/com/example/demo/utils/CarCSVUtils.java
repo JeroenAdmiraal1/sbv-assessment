@@ -15,6 +15,9 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Utils class for CarService
+ */
 @Component
 public class CarCSVUtils {
 

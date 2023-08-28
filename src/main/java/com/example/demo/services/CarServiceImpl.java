@@ -10,6 +10,9 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.InputStream;
 import java.util.List;
 
+/**
+ * service for maintaining car information
+ */
 @Service
 public class CarServiceImpl implements CarService {
 

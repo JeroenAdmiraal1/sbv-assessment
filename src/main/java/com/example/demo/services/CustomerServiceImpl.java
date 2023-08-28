@@ -5,6 +5,9 @@ import com.example.demo.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * service for maintaining customer information
+ */
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
